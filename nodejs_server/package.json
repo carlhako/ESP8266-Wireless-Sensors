@@ -1,0 +1,10 @@
+{
+  "name": "tcpdatar",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "moment": "^2.9.0",
+    "mysql": "^2.5.4",
+    "underscore": "^1.7.0"
+  }
+}
