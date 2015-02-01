@@ -1,6 +1,6 @@
 print("Setting up WIFI...")
 wifi.setmode(wifi.STATION)
-wifi.sta.config("ACHome","0400051283")
+wifi.sta.config("SSID","KEY")
 wifi.sta.connect()
 
 tmr.alarm(0, 1000, 1, function() 
