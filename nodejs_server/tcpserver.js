@@ -13,7 +13,7 @@ net.createServer(function (socket) {
 		var msg = data.toString();
 		// some work required here to handle multiple readings in one connection
 		msg = msg.trim(); // trim off any \n coming in 
-		console.log('message received: '+msg);
+		console.log(moment().format('DD/MM/YY HH:mm:ss')+' message received: '+msg);
 		if (/&&/.test(msg)) msg = msg.split(/&&/); // this was a quick fix to allow 2 readings in one line of data, separated with &&
 		if (typeof msg === "object") _.each(msg,function(m){ tcpserver.processMessage(m,socket); });
 		else { tcpserver.processMessage(msg,socket); }
